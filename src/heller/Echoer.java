@@ -1,3 +1,5 @@
+package heller;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -6,7 +8,7 @@ import java.net.Socket;
 
 public class Echoer extends Thread{
 
-    private Socket socket;
+    private final Socket socket;
 
     public Echoer(Socket socket)    {
         this.socket = socket;

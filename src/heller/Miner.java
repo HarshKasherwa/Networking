@@ -1,15 +1,18 @@
+package heller;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class User {
+public class Miner {
 
-    public static void main(String[] args) {
+    public void connect(int port, String name)   {
 
-        try(Socket socket = new Socket("localhost", 6000))  {
+        try(Socket socket = new Socket("localhost", port))  {
 
             PrintWriter output = new PrintWriter(socket.getOutputStream(), true);
+            output.println(name);
             Scanner sc = new Scanner(System.in);
 
             while (true)    {

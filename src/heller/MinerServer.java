@@ -1,3 +1,5 @@
+package heller;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -19,6 +21,8 @@ public class MinerServer {
                         new InputStreamReader(socket.getInputStream()));
 //                PrintWriter output = new PrintWriter(socket.getOutputStream(), true);
 
+//                String miner_name = input.readLine();
+//                System.out.println("Miner Name: " + miner_name);
                 String messageFromUserServer = input.readLine();
                 if (messageFromUserServer.equals("exit"))   {
                     System.out.println("Connection Closed");
